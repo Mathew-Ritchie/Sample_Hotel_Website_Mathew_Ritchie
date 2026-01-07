@@ -12,7 +12,7 @@ export default function NavModalHeader() {
   return (
     <>
       <div className="bg-black/40 flex items-center justify-end p-4 text-white shadow-lg h-20 w-full fixed  z-50">
-        <a className="bg-white/50 rounded-b-full absolute top-0 left-4 h-20 " href="/">
+        {/* <a className="bg-white/50 rounded-b-full absolute top-0 left-4 h-20 " href="/">
           <img
             src="/images/logo.png"
             alt="Bayside Pizzeria Logo"
@@ -20,7 +20,7 @@ export default function NavModalHeader() {
             width={417}
             height={96}
           />
-        </a>
+        </a> */}
         <button
           className="lg:hidden text-white hover:text-gray-400 focus:outline-none p-2 rounded-md transition duration-300"
           onClick={toggleNav}
@@ -48,26 +48,26 @@ export default function NavModalHeader() {
             href="#dining"
             className="p-2 rounded-md hover:bg-gray-700 transition duration-200"
           >
-            Dining
+            Home
           </a>
           <a
             href="#pizza"
             className="p-2 rounded-md hover:bg-gray-700 transition duration-200"
           >
-            Pizza
+           Accommodation
           </a>
           <a
             href="#pasta"
             className="p-2 rounded-md hover:bg-gray-700 transition duration-200"
           >
-            Pasta
+            Facilities
           </a>
 
           <a
             href="#dessert"
             className="p-2 rounded-md hover:bg-gray-700 transition duration-200"
           >
-            Desserts
+            Breakfast
           </a>
           <a
             href="#gallery"
@@ -131,21 +131,21 @@ export default function NavModalHeader() {
               className="block p-2 rounded-md hover:bg-gray-700 transition duration-200"
               onClick={toggleNav}
             >
-              Dining
+              Home
             </a>
             <a
               href="#pizza"
               className="block p-2 rounded-md hover:bg-gray-700 transition duration-200"
               onClick={toggleNav}
             >
-              Pizza
+                Accommodation
             </a>
             <a
               href="#pasta"
               className="block p-2 rounded-md hover:bg-gray-700 transition duration-200"
               onClick={toggleNav}
             >
-              Pasta
+                Facilities
             </a>
 
             <a
@@ -153,7 +153,7 @@ export default function NavModalHeader() {
               className="block p-2 rounded-md hover:bg-gray-700 transition duration-200"
               onClick={toggleNav}
             >
-              Dessert
+                Breakfast
             </a>
             <a
               href="#gallery"

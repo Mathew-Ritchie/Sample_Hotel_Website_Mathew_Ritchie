@@ -1,5 +1,8 @@
-import NavModalHeader from "../components/NavModalHeader";
 import { Outlet } from "react-router-dom";
+
+import Footer from "../components/Footer";
+import NavModalHeader from "../components/NavModalHeader";
+
 
 export default function MainLayout() {
     return (
@@ -7,7 +10,7 @@ export default function MainLayout() {
            <NavModalHeader />
             <Outlet />
             {/* Footer component to be added later */}
-            <footer></footer>
+            <Footer />
         </div>
     );
 }
