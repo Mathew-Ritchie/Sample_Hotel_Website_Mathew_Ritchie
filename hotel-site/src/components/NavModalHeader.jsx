@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { a } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function NavModalHeader() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -44,24 +44,24 @@ export default function NavModalHeader() {
 
         {/* Desktop Navigation for lg and up */}
         <nav className="hidden lg:flex items-center space-x-4 text-2xl pr-5">
-          <a
-            href="#dining"
+          <Link to="/"
+          
             className="p-2 rounded-md hover:bg-gray-700 transition duration-200"
           >
             Home
-          </a>
-          <a
-            href="#pizza"
+          </Link>
+          <Link to="/accommodations"
+            
             className="p-2 rounded-md hover:bg-gray-700 transition duration-200"
           >
            Accommodation
-          </a>
-          <a
-            href="#pasta"
+          </Link>
+          <Link to="/facilities"
+           
             className="p-2 rounded-md hover:bg-gray-700 transition duration-200"
           >
             Facilities
-          </a>
+          </Link>
 
           <a
             href="#dessert"
