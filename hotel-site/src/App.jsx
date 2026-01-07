@@ -1,15 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import MainLayout from "./pages/MainLayout.jsx";
 
 
-import './App.css'
+export default function App() {
+return (
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<MainLayout />} />
+        </Routes>
+    </BrowserRouter>
+)
 
-function App() {
 
 
-  return (
-    <div className="App">
-      <h1 className='text-red-500 font-bold text-6xl'>Hello</h1>
-      </div>
-  )
 }
 
-export default App
+
