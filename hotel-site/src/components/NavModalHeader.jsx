@@ -69,12 +69,12 @@ export default function NavModalHeader() {
           >
             Restaurant
           </Link>
-          <a
-            href="#gallery"
+          <Link
+            to="/gallery"
             className="p-2 rounded-md hover:bg-gray-700 transition duration-200"
           >
             Gallery
-          </a>
+          </Link>
           <a
             href="#contactUs"
             className="p-2 rounded-md hover:bg-gray-700 transition duration-200"
