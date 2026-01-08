@@ -6,6 +6,7 @@ import AccommodationPage from "./pages/AccommodationPage.jsx";
 import FacilitiesPage from "./pages/FacilitiesPage.jsx";
 import RestaurantPage from "./pages/RestaurantPage.jsx";
 import GalleryPage from "./pages/GalleryPage.jsx";
+import ContactUsPage from "./pages/ContactUsPage.jsx";
 
 export default function App() {
 return (
@@ -17,6 +18,7 @@ return (
                 <Route path="facilities" element={<FacilitiesPage />} />
                 <Route path="restaurant" element={<RestaurantPage />} />
                 <Route path="gallery" element={<GalleryPage />} />
+                 <Route path="contact-us" element={<ContactUsPage />} />
             </Route>
         </Routes>
     </BrowserRouter>

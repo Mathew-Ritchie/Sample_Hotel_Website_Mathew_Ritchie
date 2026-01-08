@@ -12,15 +12,15 @@ export default function NavModalHeader() {
   return (
     <>
       <div className="bg-black/40 flex items-center justify-end p-4 text-white shadow-lg h-20 w-full fixed  z-50">
-        {/* <a className="bg-white/50 rounded-b-full absolute top-0 left-4 h-20 " href="/">
+        <Link className="bg-black/70 rounded-b-full absolute top-0 left-4 h-25 " to="/">
           <img
-            src="/images/logo.png"
+            src="/images/hotel-logo.png"
             alt="Bayside Pizzeria Logo"
             className="h-20 w-auto"
             width={417}
             height={96}
           />
-        </a> */}
+        </Link>
         <button
           className="lg:hidden text-white hover:text-gray-400 focus:outline-none p-2 rounded-md transition duration-300"
           onClick={toggleNav}
@@ -75,12 +75,12 @@ export default function NavModalHeader() {
           >
             Gallery
           </Link>
-          <a
-            href="#contactUs"
+          <Link
+            to="/contact-us"
             className="p-2 rounded-md hover:bg-gray-700 transition duration-200"
           >
             Contact Us
-          </a>
+          </Link>
         </nav>
       </div>
 
