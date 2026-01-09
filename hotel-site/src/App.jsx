@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import { Navigate } from "react-router-dom";
 import MainLayout from "./pages/MainLayout.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
 import AccommodationPage from "./pages/AccommodationPage.jsx";
@@ -16,8 +16,11 @@ return (
             <Route path="/" element={<MainLayout />} >
                 <Route index element={<LandingPage />} />
                 <Route path="accommodations" element={<AccommodationPage />} >
-                    <Route path=":roomType" element={<RoomInfoPage />} />
-                </Route>
+                 <Route index element={<Navigate to="standard" replace />} />
+
+   
+            <Route path=":roomType" element={<RoomInfoPage />} />
+          </Route>
                 <Route path="facilities" element={<FacilitiesPage />} />
                 <Route path="restaurant" element={<RestaurantPage />} />
                 <Route path="gallery" element={<GalleryPage />} />

@@ -1,13 +1,10 @@
 import { Outlet } from "react-router-dom";
-import SubNavBar from "../components/SubNavBar";
+
 
 
 export default function AccomodationPage() {
     return (
         <div className="min-h-screen flex p-0  bg-gray-100">
-            <SubNavBar links={[
-                { to: "/accommodations/deluxe", label: "Deluxe Rooms", param: "deluxe" },
-                { to: "/accommodations/standard", label: "Standard Rooms", param: "standard" },]} />
             <div className="flex flex-col w-full  pt-20 h-full">
                 <h1 className="text-4xl font-bold mb-6">Our Accommodations</h1>
                 <Outlet />
