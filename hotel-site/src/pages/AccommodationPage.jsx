@@ -1,16 +1,26 @@
+import { Outlet } from "react-router-dom";
+import SubNavBar from "../components/SubNavBar";
+
+
 export default function AccomodationPage() {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-8">
-            <h1 className="text-4xl font-bold mb-6">Our Accommodations</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/images/deluxe-room1.jpeg" alt="Deluxe Room" className="w-full h-48 object-cover" />
-                    <div className="p-4">
-                        <h2 className="text-2xl font-semibold mb-2">Deluxe Room</h2>
+        <div className="min-h-screen flex p-0  bg-gray-100">
+            <SubNavBar links={[
+                { to: "/accommodations/deluxe", label: "Deluxe Rooms", param: "deluxe" },
+                { to: "/accommodations/standard", label: "Standard Rooms", param: "standard" },]} />
+            <div className="flex flex-col w-full  pt-20 h-full">
+                <h1 className="text-4xl font-bold mb-6">Our Accommodations</h1>
+                <Outlet />
+            </div>
+            {/*  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                     <img src="/images/deluxe-room1.jpeg" alt="Deluxe Room" className="w-full h-48 object-cover" />
+                     <div className="p-4">
+                         <h2 className="text-2xl font-semibold mb-2">Deluxe Room</h2>
                         <p className="text-gray-700 mb-4">Spacious room with a king-size bed, ensuite bathroom, and city views.</p>
                         <span className="text-blue-600 font-bold">$150/night</span>
                     </div>
-                </div>
+                </div> */}
                 {/* <div className="bg-white rounded-lg shadow-md overflow-hidden">
                     <img src="/images/room2.jpeg" alt="Suite" className="w-full h-48 object-cover" />
                     <div className="p-4">
@@ -19,7 +29,7 @@ export default function AccomodationPage() {
                         <span className="text-blue-600 font-bold">$250/night</span>
                     </div>
                 </div> */}
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                {/* <div className="bg-white rounded-lg shadow-md overflow-hidden">
                     <img src="/images/standard-room1.jpeg" alt="Standard Room" className="w-full h-48 object-cover" />
                     <div className="p-4">   
                         <h2 className="text-2xl font-semibold mb-2">Standard Room</h2>
@@ -27,7 +37,7 @@ export default function AccomodationPage() {
                         <span className="text-blue-600 font-bold">$100/night</span>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }   

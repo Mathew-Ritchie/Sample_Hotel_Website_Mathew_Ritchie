@@ -1,0 +1,40 @@
+import { useParams } from "react-router-dom";
+import roomData from "../data/roomData";
+
+
+
+export default function RoomInfoPage() {
+    const { roomType } = useParams();
+    const room = roomData[roomType];
+
+    if (!room) {
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-8">
+                <h1 className="text-4xl font-bold mb-6">Room Not Found</h1>
+                <p className="text-gray-700">The requested room type does not exist.</p>
+            </div>
+        );
+    }
+
+    return (
+        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-8">
+            <h1 className="text-4xl font-bold mb-6">{room.name}</h1>
+            <div className="w-full max-w-4xl bg-white rounded-lg shadow-md p-6">
+                <p className="text-gray-700 mb-4">{room.description}</p>
+                <div className="mb-4">
+                    <h2 className="text-2xl font-semibold mb-2">Amenities</h2>
+                    <ul className="list-disc list-inside text-gray-700">
+                        {room.amenities.map((amenity, index) => (
+                            <li key={index}>{amenity}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div>
+                    <h2 className="text-2xl font-semibold mb-2">Price</h2>
+                    <p className="text-blue-600 font-bold text-lg">${room.price}/night</p>
+                </div>
+            </div>
+        </div>
+    );
+    
+}
