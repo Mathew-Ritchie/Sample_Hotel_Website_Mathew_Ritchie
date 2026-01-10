@@ -53,7 +53,7 @@ export default function NavModalHeader() {
 
           <div className="relative group">
             <NavItem to="/accommodations">Accommodation</NavItem>
-            <div className="absolute left-0 mt-2 hidden w-48 rounded-md bg-black/90 shadow-lg group-hover:block">
+            <div className="absolute left-0 mt-0.5 hidden w-48 rounded-md bg-black/90 shadow-lg group-hover:block">
               <NavItem
                   to="/accommodations/standard"
                   className="text-lg"
@@ -68,7 +68,7 @@ export default function NavModalHeader() {
           </div>
            <div className="relative group">
             <NavItem to="/facilities">Facilities</NavItem>
-            <div className="absolute left-0 mt-2 hidden w-48 rounded-md bg-black/90 shadow-lg group-hover:block">
+            <div className="absolute left-0 mt-0.5 hidden w-48 rounded-md bg-black/90 shadow-lg group-hover:block">
               <NavItem
                   to="/facilities/standard"
                   className="text-lg"

@@ -3,7 +3,7 @@ import roomData from "../data/roomData";
 
 
 
-export default function RoomInfoPage() {
+export default function DynamicRoomInfoPage() {
     const { roomType } = useParams();
     const room = roomData[roomType];
 

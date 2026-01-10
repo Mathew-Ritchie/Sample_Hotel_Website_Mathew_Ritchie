@@ -1,40 +1,27 @@
-import { Outlet } from "react-router-dom";
+//import { useParams } from "react-router-dom";
+import roomData from "../data/roomData";
+import { NavLink } from "react-router-dom";
 
 
-
-export default function AccomodationPage() {
+export default function AccommodationPage() {
+   console.log(roomData);
     return (
-        <div className="min-h-screen flex p-0  bg-gray-100">
-            <div className="flex flex-col w-full  pt-20 h-full">
-                <h1 className="text-4xl font-bold mb-6">Our Accommodations</h1>
-                <Outlet />
+        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-8">
+            <h1 className="text-4xl font-bold mb-6">Our Accommodations</h1>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+                {Object.entries(roomData).map(([key, room]) => (
+                  <NavLink to={`/accommodations/${key}`} key={key} className="no-underline">
+                    <div key={key} className="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src={room.images[0]} alt={room.name} className="w-full h-48 object-cover" />
+                        <div className="p-4">
+                            <h2 className="text-2xl font-semibold mb-2">{room.name}</h2>
+                            <p className="text-gray-700 mb-4">{room.description}</p>
+                            <p className="text-blue-600 font-bold text-lg">${room.price}/night</p>
+                        </div>
+                    </div>
+                  </NavLink>
+                ))}
             </div>
-            {/*  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
-                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                     <img src="/images/deluxe-room1.jpeg" alt="Deluxe Room" className="w-full h-48 object-cover" />
-                     <div className="p-4">
-                         <h2 className="text-2xl font-semibold mb-2">Deluxe Room</h2>
-                        <p className="text-gray-700 mb-4">Spacious room with a king-size bed, ensuite bathroom, and city views.</p>
-                        <span className="text-blue-600 font-bold">$150/night</span>
-                    </div>
-                </div> */}
-                {/* <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/images/room2.jpeg" alt="Suite" className="w-full h-48 object-cover" />
-                    <div className="p-4">
-                        <h2 className="text-2xl font-semibold mb-2">Suite</h2>
-                        <p className="text-gray-700 mb-4">Luxurious suite with separate living area, premium amenities, and ocean views.</p>
-                        <span className="text-blue-600 font-bold">$250/night</span>
-                    </div>
-                </div> */}
-                {/* <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/images/standard-room1.jpeg" alt="Standard Room" className="w-full h-48 object-cover" />
-                    <div className="p-4">   
-                        <h2 className="text-2xl font-semibold mb-2">Standard Room</h2>
-                        <p className="text-gray-700 mb-4">Comfortable room with all essential amenities for a pleasant stay.</p>
-                        <span className="text-blue-600 font-bold">$100/night</span>
-                    </div>
-                </div>
-            </div> */}
         </div>
     );
-}   
+}
