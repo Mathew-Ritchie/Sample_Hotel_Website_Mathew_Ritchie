@@ -1,29 +1,26 @@
+import facilitiesData from "../data/facilitiesData";
+import { NavLink } from "react-router-dom";
+
 export default function FacilitiesPage() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-8">
             <h1 className="text-4xl font-bold mb-6">Our Facilities</h1>
+             <p className="text-center mb-8">Our hotel facilities are designed to enhance every aspect of your stay. 
+              Guests can unwind by the sparkling swimming pool, maintain their wellness routine in the fully equipped
+               fitness centre, or indulge in relaxation at the spa and beauty centre. Each facility offers a calm,
+               welcoming environment, ensuring comfort, rejuvenation, and a truly well-rounded hotel experience.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/images/pool2.jpeg" alt="Swimming Pool" className="w-full h-48 object-cover" />
-                    <div className="p-4">
-                        <h2 className="text-2xl font-semibold mb-2">Swimming Pool</h2>
-                        <p className="text-gray-700 mb-4">Enjoy our outdoor swimming pool with a relaxing ambiance.</p>
+              {Object.entries(facilitiesData).map(([key, facility]) => (
+                  <NavLink to={`/facilities/${key}`} key={key} className="no-underline h-90">
+                    <div key={key} className="bg-white h-90 rounded-lg shadow-md overflow-hidden">
+                        <img src={facility.image} alt={facility.title} className="w-full h-48 object-cover" />
+                        <div className="p-4">
+                            <h2 className="text-2xl font-semibold mb-2">{facility.title}</h2>
+                            <p className="text-gray-700 mb-4">{facility.description}</p>
+                        </div>
                     </div>
-                </div>
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/images/gym1.jpeg" alt="Fitness Center" className="w-full h-48 object-cover" />
-                    <div className="p-4">
-                        <h2 className="text-2xl font-semibold mb-2">Fitness Center</h2>
-                        <p className="text-gray-700 mb-4">State-of-the-art gym equipped with modern fitness equipment.</p>
-                    </div>
-                </div>
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="/images/spa1.jpeg" alt="Spa" className="w-full h-48 object-cover" />
-                    <div className="p-4">
-                        <h2 className="text-2xl font-semibold mb-2">Spa</h2>
-                        <p className="text-gray-700 mb-4">Relax and rejuvenate with our range of spa treatments.</p>
-                    </div>
-                </div>
+                  </NavLink>
+                ))}
             </div>
         </div>
     );

@@ -70,14 +70,19 @@ export default function NavModalHeader() {
             <NavItem to="/facilities">Facilities</NavItem>
             <div className="absolute left-0 mt-0.5 hidden w-48 rounded-md bg-black/90 shadow-lg group-hover:block">
               <NavItem
-                  to="/facilities/standard"
+                  to="/facilities/pool"
                   className="text-lg"
-                > Standard Room
+                > Swimming Pool
               </NavItem>
               <NavItem
-                  to="/facilities/deluxe"
+                  to="/facilities/gym"
                   className="text-lg"
-                > Deluxe Room
+                > Fitness Center
+              </NavItem>
+              <NavItem
+                  to="/facilities/spa"
+                  className="text-lg"
+                > Spa & Beauty Center
               </NavItem>
             </div>
           </div>

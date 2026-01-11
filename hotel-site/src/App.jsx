@@ -8,6 +8,7 @@ import RestaurantPage from "./pages/RestaurantPage.jsx";
 import GalleryPage from "./pages/GalleryPage.jsx";
 import ContactUsPage from "./pages/ContactUsPage.jsx";
 import DynamicRoomInfoPage from "./pages/DynamicRoomInfoPage.jsx";
+import DynamicFacilitiesInfoPage from "./pages/DynamicFacilitiesInfoPage.jsx";
 
 export default function App() {
 return (
@@ -19,6 +20,7 @@ return (
                   {/* <Route index element={<Navigate to="standard" replace />} /> */}
                 <Route path="accommodations/:roomType" element={<DynamicRoomInfoPage />} />
                 <Route path="facilities" element={<FacilitiesPage />} />
+                <Route path="facilities/:facilityType" element={<DynamicFacilitiesInfoPage />} />
                 <Route path="restaurant" element={<RestaurantPage />} />
                 <Route path="gallery" element={<GalleryPage />} />
                 <Route path="contact-us" element={<ContactUsPage />} />
