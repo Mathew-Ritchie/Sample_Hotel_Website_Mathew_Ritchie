@@ -17,21 +17,28 @@ export default function DynamicRoomInfoPage() {
     }
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-8">
-            <h1 className="text-4xl font-bold mb-6">{room.name}</h1>
+        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-8 pt-20">
+           
             <div className="w-full max-w-4xl bg-white rounded-lg shadow-md p-6">
-                <p className="text-gray-700 mb-4">{room.description}</p>
-                <div className="mb-4">
+               <h1 className="text-4xl font-bold mb-6">{room.name}</h1>
+              <div className="flex flex-col sm:flex-row gap-2 h-auto mb-4">
+                {room.images && room.images.map((image, index) => (
+                  <img key={index} src={image} alt={`${room.name} ${index + 1}`} className="w-full h-64 object-cover rounded-lg mb-4" />
+                ))}
+              </div>
+              <div className="flex flex-col sm:flex-row gap-5">
+                <p className="text-gray-700 mb-4 sm:w-3/4">{room.description}</p>
+                <div className="mb-4 sm:w-1/4">
                     <h2 className="text-2xl font-semibold mb-2">Amenities</h2>
                     <ul className="list-disc list-inside text-gray-700">
                         {room.amenities.map((amenity, index) => (
                             <li key={index}>{amenity}</li>
                         ))}
                     </ul>
-                </div>
+                </div></div>
+                
                 <div>
-                    <h2 className="text-2xl font-semibold mb-2">Price</h2>
-                    <p className="text-blue-600 font-bold text-lg">${room.price}/night</p>
+                    <h2 className="text-2xl font-semibold">Price starting from: <span className="text-blue-600 font-bold text-lg">R{room.price}/night</span></h2>
                 </div>
             </div>
         </div>

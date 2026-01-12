@@ -9,10 +9,13 @@ import GalleryPage from "./pages/GalleryPage.jsx";
 import ContactUsPage from "./pages/ContactUsPage.jsx";
 import DynamicRoomInfoPage from "./pages/DynamicRoomInfoPage.jsx";
 import DynamicFacilitiesInfoPage from "./pages/DynamicFacilitiesInfoPage.jsx";
+import ScrollToTopAuto from "./Utils/ScrollToTopAuto.jsx";
+import "./App.css";
 
 export default function App() {
 return (
     <BrowserRouter>
+    <ScrollToTopAuto />
         <Routes>
             <Route path="/" element={<MainLayout />} >
                 <Route index element={<LandingPage />} />

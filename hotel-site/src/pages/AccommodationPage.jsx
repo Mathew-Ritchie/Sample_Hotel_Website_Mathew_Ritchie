@@ -21,8 +21,9 @@ export default function AccommodationPage() {
                         <img src={room.images[0]} alt={room.name} className="w-full h-48 object-cover" />
                         <div className="p-4">
                             <h2 className="text-2xl font-semibold mb-2">{room.name}</h2>
-                            <p className="text-gray-700 mb-4">{room.description}</p>
-                            <p className="text-blue-600 font-bold text-lg">${room.price}/night</p>
+                            <p className="text-gray-700 mb-4">{room.shortDescription}</p>
+                            {/* <p className="text-blue-600 font-bold text-lg">${room.price}/night</p> */}
+                            <p className="text-blue-600 font-bold text-lg">Click to find out more</p>
                         </div>
                     </div>
                   </NavLink>
