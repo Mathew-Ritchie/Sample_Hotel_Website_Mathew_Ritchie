@@ -52,4 +52,12 @@ const roomData = {
     },
 };
 
+export const sharedImages = [
+    "/images/amenities.jpeg",
+    "/images/bath-towels.jpeg",
+    "/images/bathroom1.jpeg",
+    "/images/roomcoffee.jpeg",
+    "/images/kitchenette.jpeg"
+];
+
 export default roomData;
