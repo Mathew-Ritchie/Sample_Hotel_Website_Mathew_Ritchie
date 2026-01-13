@@ -4,7 +4,7 @@ import { Linkedin, Facebook, Instagram } from "lucide-react";
 export default function ContactUsPage({ id }) {
   return (
     <div
-      className="w-full min-h-screen px-10 py-10 flex justify-center items-center gap-10  text-black"
+      className="w-full min-h-screen px-10 pb-10 pt-22 flex justify-center items-center gap-10  text-black"
       id={id}
     >
       <div className="relative z-10 md:w-full w-full  text-black p-8 overflow-y-auto ">

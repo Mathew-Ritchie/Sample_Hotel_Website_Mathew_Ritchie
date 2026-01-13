@@ -4,7 +4,8 @@ import NavItem from "./NavItem.jsx";
 
 export default function NavModalHeader() {
   const [isNavOpen, setIsNavOpen] = useState(false);
- const [isAccommodationOpen, setIsAccommodationOpen] = useState(false);
+  const [isAccommodationOpen, setIsAccommodationOpen] = useState(false); 
+  const [isFacilitiesOpen, setIsFacilitiesOpen] = useState(false);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -180,7 +181,56 @@ export default function NavModalHeader() {
                     </div>
                   )}
                 </div>
-            <NavItem to="/facilities" onClick={toggleNav}>Facilities</NavItem>
+            
+
+
+            <div className="space-y-1">
+                  <div className="flex items-center justify-between rounded-md hover:bg-gray-700">
+                    <NavItem
+                      to="/facilities"
+                      onClick={toggleNav}
+                      className="flex-1"
+                    >
+                      Facilities
+                    </NavItem>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        setIsFacilitiesOpen((prev) => !prev);
+                      }}
+                      className="p-2"
+                    >
+                      ▼
+                    </button>
+                  </div>
+
+                  {isFacilitiesOpen && (
+                    <div className="ml-4 space-y-1">
+                      <NavItem
+                        to="/facilities/pool"
+                        onClick={toggleNav}
+                        className="text-sm"
+                      >
+                        Swimming Pool
+                      </NavItem>
+                      <NavItem
+                        to="/facilities/gym"
+                        onClick={toggleNav}
+                        className="text-sm"
+                      >
+                        Fitness Center
+                      </NavItem>
+                      <NavItem
+                        to="/facilities/spa"
+                        onClick={toggleNav}
+                        className="text-sm"
+                      >
+                        Spa and Beauty Center
+                      </NavItem>
+                    </div>
+                  )}
+                </div>
             <NavItem to="/gallery" onClick={toggleNav}>Gallery</NavItem>
             <NavItem to="/contact-us" onClick={toggleNav}>Contact Us</NavItem>
           </nav>
