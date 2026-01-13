@@ -16,7 +16,7 @@ export default function NavModalHeader() {
     <>
       <div className="bg-black/40 flex items-center justify-end p-4 text-white shadow-lg h-20 w-full fixed  z-50">
         {/* Logo with link back to Home page */}
-        <Link className="bg-black/70 rounded-b-full absolute top-0 left-4 h-25 " to="/">
+        <Link className="bg-gray-900/80 rounded-b-4xl absolute top-0 left-4 h-20 w-35 flex justify-center " to="/">
           <img
             src="/images/hotel-logo.png"
             alt="Bayside Pizzeria Logo"

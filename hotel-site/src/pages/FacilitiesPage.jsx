@@ -5,7 +5,7 @@ export default function FacilitiesPage() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-2 sm:p-8 pt-21 sm:pt-20">
         <div className="min-h-screen flex flex-col items-center justify-center w-full max-w-4xl bg-white rounded-lg shadow-md p-2 sm:p-6">
-            <h1 className="text-4xl font-bold mb-6 pt-4">Our Facilities</h1>
+            <h1 className="text-4xl font-bold mb-6 pt-4">Facilities</h1>
              <p className="text-center mb-8">Our hotel facilities are designed to enhance every aspect of your stay. 
               Guests can unwind by the sparkling swimming pool, maintain their wellness routine in the fully equipped
                fitness centre, or indulge in relaxation at the spa and beauty centre. Each facility offers a calm,

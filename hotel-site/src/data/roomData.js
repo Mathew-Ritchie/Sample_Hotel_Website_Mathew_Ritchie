@@ -12,9 +12,8 @@ const roomData = {
         pleasant and restful hotel experience.`,
         price: 1500,
         images: [
-            "/images/standard-room1.jpeg",
-            "/images/twinroom1.jpeg",
-            //"/images/suite3.jpeg"
+            {path:"/images/standard-room1.jpeg", alt:"Image of Standard Room With Double Bed"},
+            {path:"/images/twinroom1.jpeg", alt:"Image of Standard Room with Twin Beds"},
         ],
         amenities: [
             "Free Wi-Fi",
@@ -38,9 +37,8 @@ const roomData = {
         with a touch of luxury.`,
         price: 2500,
         images: [
-            "/images/deluxe-room1.jpeg",
-            "/images/deluxe-room2.jpeg",
-           // "/images/deluxe-room3.jpeg"
+            {path:"/images/deluxe-room1.jpeg", alt:"Deluxe Room View of Bed with Lounge and Kitchenette in the background"},
+            {path:"/images/deluxe-room2.jpeg", alt:"Deluxe Room View of Lounge Area and Bed in the background"},
         ],
         amenities: [
             "Free Wi-Fi",
@@ -52,12 +50,12 @@ const roomData = {
     },
 };
 
-export const sharedImages = [
-    "/images/amenities.jpeg",
-    "/images/bath-towels.jpeg",
-    "/images/bathroom1.jpeg",
-    "/images/roomcoffee.jpeg",
-    "/images/kitchenette.jpeg"
-];
+export const sharedImages = {
+    amenities: {path:"/images/amenities.jpeg", alt:"Image of Hotel Amenities in Bathrooms" },
+    bathTowels: {path:"/images/bath-towels.jpeg", alt:"Image of Cleaning Staff Holding Folded Bath Towels"},
+    bathroom1: {path:"/images/bathroom1.jpeg", alt:"Image of a Bedroom Bathroom"},
+    roomCoffee: {path:"/images/roomcoffee.jpeg", alt:"Pair of Coffee Mugs on a Tray on the Bad"},
+    kitchenette: {path:"/images/kitchenette.jpeg", alt:"Toaster With Bread Slices in a Kitchenette"},
+};
 
 export default roomData;
