@@ -1,14 +1,16 @@
 import React from "react";
+import "../App.css";
 
 
 export default function RestaurantPage() {
   return (
-    <div className="pb-5 px-4 sm:px-10  md:px-20 lg:px-20">
-      <h2
-        className="text-3xl font-bold text-center pt-25 mb-5  md:mb-10"
+      <div className="min-h-screen flex flex-col items-center bg-gray-100 p-2 sm:p-8 pt-21 sm:pt-21">
+    <div className="bg-white pb-5 px-4 sm:px-10 md:px-20 lg:px-20  p-2 sm:p-6">
+      <h1
+        className="page-main-title"
       >
        Enjoy our breakfast daily
-      </h2>
+      </h1>
       <hr className="md:pt-5"></hr>
       <p className="py-5 text-justify">
         <img
@@ -32,6 +34,7 @@ export default function RestaurantPage() {
         Thoughtfully arranged and regularly replenished, the breakfast buffet allows guests to enjoy their meal at their own pace. Friendly staff are on hand to assist while maintaining a calm, welcoming atmosphere. Whether enjoyed quickly or savoured slowly, the buffet breakfast delivers a comforting and convenient start to the day for every guest.
       </p>
       <hr></hr>
+    </div>
     </div>
   );
 }

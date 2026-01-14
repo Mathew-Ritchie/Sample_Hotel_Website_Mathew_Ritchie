@@ -21,8 +21,10 @@ export default function GalleryPage() {
   ];
 
   return (
-    <div id="gallery" className="flex flex-col justify-center items-center py-10 px-2  sm:px-20 w-full">
-      <h1 className="text-4xl font-bold text-black mb-10  pt-15">Gallery</h1>
+     <div className="min-h-screen flex flex-col items-center bg-gray-100 p-2 sm:p-8 pt-21 sm:pt-21">
+        <div className="min-h-screen flex flex-col items-center w-full max-w-4xl bg-white rounded-lg shadow-md p-2 sm:p-6">
+            <h1 className="page-main-title">Gallery</h1>
+            <hr className="md:pt-5"></hr>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" >
         {images.map((image) => (
           <div 
@@ -63,6 +65,7 @@ export default function GalleryPage() {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 }
