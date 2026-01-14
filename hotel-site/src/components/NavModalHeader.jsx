@@ -49,7 +49,7 @@ export default function NavModalHeader() {
 
 
         {/* Desktop Navigation for lg and up */}
-        <nav className="hidden lg:flex items-center space-x-4 text-2xl pr-5">
+        <nav className="hidden lg:flex items-center space-x-3 text-2xl pr-5">
           <NavItem to="/">Home</NavItem>
 
           <div className="relative group">

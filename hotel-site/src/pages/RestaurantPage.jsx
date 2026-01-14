@@ -5,7 +5,7 @@ import "../App.css";
 export default function RestaurantPage() {
   return (
       <div className="min-h-screen flex flex-col items-center bg-gray-100 p-2 sm:p-8 pt-21 sm:pt-21">
-    <div className="bg-white pb-5 px-4 sm:px-10 md:px-20 lg:px-20  p-2 sm:p-6">
+    <div className="w-full bg-white pb-5 px-4 sm:px-10 md:px-20 lg:px-20  p-2 sm:p-6">
       <h1
         className="page-main-title"
       >

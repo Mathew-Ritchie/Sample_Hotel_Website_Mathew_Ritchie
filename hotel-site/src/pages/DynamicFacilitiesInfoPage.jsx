@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import facilitiesData from "../data/facilitiesData";
+import CallToActionBanner from "../components/CallToActionBanner";
 
 
 
@@ -18,12 +19,12 @@ export default function DynamicFacilitiesInfoPage() {
 
     return (
     <div className="pb-5 px-4 sm:px-10  md:px-20 lg:px-20">
-      <h2
+      <h1
         className="text-3xl font-bold text-center pt-25 mb-5  md:mb-10"
       >
         {facility.title}
-      </h2>
-      <hr className="md:pt-5"></hr>
+      </h1>
+       <hr className=" text-black mx-auto md:pt-5 w-2/3"></hr>
       <p className="py-5 text-justify">
         <img
           src={facility.image1.path}
@@ -46,6 +47,7 @@ export default function DynamicFacilitiesInfoPage() {
         {facility.paragraph[2]}
       </p>
       <hr></hr>
+      <CallToActionBanner />
     </div>
   );  
 }

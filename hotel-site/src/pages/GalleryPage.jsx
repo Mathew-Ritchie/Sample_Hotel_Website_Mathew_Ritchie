@@ -24,7 +24,7 @@ export default function GalleryPage() {
      <div className="min-h-screen flex flex-col items-center bg-gray-100 p-2 sm:p-8 pt-21 sm:pt-21">
         <div className="min-h-screen flex flex-col items-center w-full max-w-4xl bg-white rounded-lg shadow-md p-2 sm:p-6">
             <h1 className="page-main-title">Gallery</h1>
-            <hr className="md:pt-5"></hr>
+            <hr className=" text-black md:pt-5 w-2/3"></hr>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" >
         {images.map((image) => (
           <div 

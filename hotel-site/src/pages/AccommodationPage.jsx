@@ -9,7 +9,7 @@ export default function AccommodationPage() {
       <div className="min-h-screen flex flex-col items-center bg-gray-100 p-2 sm:p-8 pt-21 sm:pt-21">
         <div className="min-h-screen flex flex-col items-center w-full max-w-4xl bg-white rounded-lg shadow-md p-2 sm:p-6">
             <h1 className="page-main-title">Accommodation</h1>
-            <hr className="md:pt-5"></hr>
+             <hr className=" text-black md:pt-5 w-2/3"></hr>
             <p className="text-center mb-8">Our hotel accommodation features both Standard and Deluxe room options, 
               thoughtfully designed to suit different travel needs. Standard rooms offer 
               comfortable furnishings and essential amenities for a relaxing stay. Deluxe rooms 
@@ -25,7 +25,7 @@ export default function AccommodationPage() {
                             <h2 className="text-2xl font-semibold mb-2">{room.name}</h2>
                             <p className="text-gray-700 mb-4">{room.shortDescription}</p>
                             {/* <p className="text-blue-600 font-bold text-lg">${room.price}/night</p> */}
-                            <p className="text-blue-600 font-bold text-lg">Click to find out more</p>
+                            <p className="text-gray-400 font-bold text-lg">Click to find out more</p>
                         </div>
                     </div>
                   </NavLink>
