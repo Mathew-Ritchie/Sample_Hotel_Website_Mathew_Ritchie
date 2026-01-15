@@ -1,3 +1,4 @@
+import ReadMoreButton from "../components/ReadMoreButton";
 import facilitiesData from "../data/facilitiesData";
 import { NavLink } from "react-router-dom";
 
@@ -25,9 +26,10 @@ export default function FacilitiesPage() {
                       <div className="p-4 flex flex-col justify-between flex-grow">
                         <h2 className="text-2xl font-semibold mb-2">{facility.title}</h2>
                         <p className="text-gray-700 mb-4">{facility.description}</p>
-                        <p className="text-gray-400 font-bold text-lg">
+                        <ReadMoreButton to={`/facilities/${key}`} />
+                        {/* <p className="text-gray-400 font-bold text-lg">
                           Click to find out more
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                   </NavLink>

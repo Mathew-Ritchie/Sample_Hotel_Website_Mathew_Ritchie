@@ -6,7 +6,7 @@ export default function CallToActionBanner() {
                 <p className="text-lg md:text-xl mb-6 text-shadow-lg">Book your stay with us today and indulge in comfort.</p>
                 <a
                     href="/accommodations"
-                    className="button-colour text-white font-semibold py-3 px-6 rounded-md text-shadow-lg transition duration-200 "
+                    className="primary-button-colour text-white font-semibold py-3 px-6 rounded-md text-shadow-lg transition duration-200 "
                 >
                     Contact Us Today!
                 </a>

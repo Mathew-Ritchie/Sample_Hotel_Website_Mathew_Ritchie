@@ -2,10 +2,11 @@ import React from "react";
 //import { Linkedin, Facebook, Instagram } from "lucide-react";
 import SocialMediaComponent from "../components/SocialMediaComponent";
 import ContactInfoComponent from "../components/ContactInfoComponent";
+import ContactForm from "../components/ContactForm";
 
 export default function ContactUsPage() {
   return (
-   <div className="h-screen flex flex-col items-center bg-gray-100 p-2 sm:p-8 pt-21 sm:pt-21">
+   <div className=" flex flex-col items-center bg-gray-100 p-2 sm:p-8 pt-21 sm:pt-21">
         <div className="h-full flex flex-col items-center w-full max-w-4xl bg-white rounded-lg shadow-md p-2 sm:p-6">
             <h1 className="page-main-title">Contact Us</h1>
              <hr className=" text-black md:pt-5 w-2/3"></hr>
@@ -17,6 +18,7 @@ export default function ContactUsPage() {
              <ContactInfoComponent  />  
             </div>
           </div>
+           <ContactForm />
           {/* Social Media details can be updated in contactAndSocialData.js */}
          <SocialMediaComponent />
         </div>

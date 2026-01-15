@@ -9,7 +9,7 @@ export default function SocialMediaComponent() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-gray-100 rounded-full transition-all duration-300 transform hover:scale-110 hover:bg-linkedin-500"
+                className="p-3 bg-gray-100 rounded-full transition-all duration-300 transform hover:scale-110 hover:text-white hover:bg-[#d99c1e]"
                 aria-label={social.label}
             >
                 <social.tag className="h-6 w-6" />

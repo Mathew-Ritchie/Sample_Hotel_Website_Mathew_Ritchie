@@ -1,4 +1,6 @@
 //import { useParams } from "react-router-dom";
+import BookNowButton from "../components/BookNowButton";
+import ReadMoreButton from "../components/ReadMoreButton";
 import roomData from "../data/roomData";
 import { NavLink } from "react-router-dom";
 
@@ -25,7 +27,11 @@ export default function AccommodationPage() {
                             <h2 className="text-2xl font-semibold mb-2">{room.name}</h2>
                             <p className="text-gray-700 mb-4">{room.shortDescription}</p>
                             {/* <p className="text-blue-600 font-bold text-lg">${room.price}/night</p> */}
-                            <p className="text-gray-400 font-bold text-lg">Click to find out more</p>
+                            {/* <p className="text-gray-400 font-bold text-lg">Click to find out more</p> */}
+                            <div className="flex gap-2 justify-center">
+                              <ReadMoreButton to={`/accommodations/${key}`} />
+                              <BookNowButton to="/booking" />
+                            </div>
                         </div>
                     </div>
                   </NavLink>

@@ -18,11 +18,23 @@ body {
   color: #1f2937;
 }
 
-.button-colour {
+.primary-button-colour {
   background-color: #EEBA25;
   color: white
 }
 
-.button-colour:hover {
+.primary-button-colour:hover {
   background-color: #d99c1e;
+}
+
+.secondary-button-colour {
+  border: 2px solid;
+  border-color: #d99c1e;
+  background-color: white;
+  color: #d99c1e
+}
+
+.secondary-button-colour:hover {
+  background-color: #d99c1e;
+  color: white;
 }
